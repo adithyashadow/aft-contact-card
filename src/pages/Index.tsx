@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
 const Index = () => {
-  const phoneNumber = "+94 769 635 457";
+  const phoneNumber = "+94 769 635 678";
   const email = "adithyafleetandtransport@gmail.com";
   const address = "763/1 Romiyal Mawatha, Panagoda, Homagama";
   const whatsappNumber = "94769635457";
@@ -13,7 +13,7 @@ const Index = () => {
   const handleWhatsApp = () => window.open(`https://wa.me/${whatsappNumber}`, "_blank");
   const handleEmail = () => window.open(`mailto:${email}`, "_self");
   const handleDownloadVCard = () => {
-    const vcard = `BEGIN:VCARD
+  const vcard = `BEGIN:VCARD
 VERSION:3.0
 FN:Adithya Fleet And Transport
 ORG:Adithya Fleet And Transport
