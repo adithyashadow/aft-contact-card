@@ -2,7 +2,12 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -87,6 +92,19 @@ export default {
         "glow": {
           "0%, 100%": { boxShadow: "0 0 20px hsl(160 65% 45% / 0.1)" },
           "50%": { boxShadow: "0 0 40px hsl(160 65% 45% / 0.3)" }
+        },
+        // Snowfall animations
+        "fall": {
+          "0%": { transform: "translateY(-10px) translateX(0)", opacity: "0.8" },
+          "100%": { transform: "translateY(110vh) translateX(20px)", opacity: "0.2" }
+        },
+        "drift": {
+          "0%, 100%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(15px)" }
+        },
+        "twinkle": {
+          "0%, 100%": { opacity: "0.8" },
+          "50%": { opacity: "0.4" }
         }
       },
       animation: {
@@ -95,7 +113,10 @@ export default {
         "fade-in": "fade-in 0.6s ease-out",
         "fade-in-up": "fade-in-up 0.4s ease-out",
         "scale-in": "scale-in 0.4s ease-out",
-        "glow": "glow 3s ease-in-out infinite"
+        "glow": "glow 3s ease-in-out infinite",
+        "fall": "fall linear infinite",
+        "drift": "drift 4s ease-in-out infinite alternate",
+        "twinkle": "twinkle 2s ease-in-out infinite alternate"
       },
     },
   },
